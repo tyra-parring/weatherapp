@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Data</title>
+</head>
+<body>
+    <form method="get" action="{{ url_for('get_data') }}">
+        <input type="text" name="city" placeholder="Enter city" required>
+        <button type="submit">Search</button>
+    </form>
+
+    {% if city and forecast %}
+    <h3>Weather in {{ city.name }} {{ city.country }}</h3>  
+    <ul>
+        {% for day in forecast %}
+        <li>Date: {{ day.date }}</li>
+        <li> Temperature: {{ day.temperature }}</li>
+        <li> Humidity: {{ day.humidity }}</li>
+        <li> Wind: {{ day.wind }}</li>
+        <li> Description: {{ day.description }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+</html>
