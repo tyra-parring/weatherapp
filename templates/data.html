@@ -33,22 +33,24 @@
 
             {% if forecast|length > 0 %}
                 <div class="main-forecast">
-                    <li>Date: {{ forecast[0].date }}</li>
-                    <li> Temperature: {{ forecast[0].temperature }}°C</li>
-                    <li> Humidity: {{ forecast[0].humidity }} %</li>
-                    <li> Wind: {{ forecast[0].wind }} m/s</li>
-                    <li> Description: {{ forecast[0].description }}</li>
+                    <h4>{{ forecast[0].date }}</h4>
+                    <p><img src="https://openweathermap.org/img/wn/{{forecast[0].icon}}@2x.png" alt="Icon"></p>
+                    <p> Temperature: {{ forecast[0].temperature }}°C</p>
+                    <p> Humidity: {{ forecast[0].humidity }} %</p>
+                    <p> Wind: {{ forecast[0].wind }} m/s</p>
+                    <p> Description: {{ forecast[0].description }}</p>
 
                 </div>
                 <div class="forecast-list">
                     {% for day in forecast[1:] %}
-                    <ul class="other">
-                        <li>Date: {{ day.date }}</li>
-                        <li> Temperature: {{ day.temperature }}</li>
-                        <li> Humidity: {{ day.humidity }}</li>
-                        <li> Wind: {{ day.wind }}</li>
-                        <li> Description: {{ day.description }}</li>
-                    </ul>
+                    <div class="other">
+                        <h4>{{ day.date }}</h4>
+                        <p><img src="https://openweathermap.org/img/wn/{{day.icon}}@2x.png" alt="Icon"></p>
+                        <p> Temperature: {{ day.temperature }}</p>
+                        <p> Humidity: {{ day.humidity }}</p>
+                        <p> Wind: {{ day.wind }}</p>
+                        <p> Description: {{ day.description }}</p>
+                    </div>
                 {% endfor %}
                 </div>
             {% endif %}

@@ -3,8 +3,8 @@
 }
 section{
     width: 100vw;
-    height: 100vh;
-    background-color: pink;
+    min-height: 100vh;
+    background-color: rgba(21, 92, 91, 0.864);
     overflow: hidden;
 }
 
@@ -22,9 +22,13 @@ section{
 }
 .forecast-list{
     display: flex;
-    width: 100%;
-    padding: auto;
+    justify-content: space-evenly;
+    padding: 10px;
 }
 .other{
-    width: 100%;
+    width: 330px;
+    background-color: rgba(255, 228, 196, 0.518);
+    border-radius: 10px;
+    padding: 10px;
 }
+
