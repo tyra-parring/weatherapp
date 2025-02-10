@@ -16,3 +16,15 @@ section{
 .search-btn{
     padding: 16px;
 }
+
+.main-forecast{
+    width: 100%;
+}
+.forecast-list{
+    display: flex;
+    width: 100%;
+    padding: auto;
+}
+.other{
+    width: 100%;
+}
