@@ -15,24 +15,25 @@
         <h1 class="h1 text-center">Forecast or Something</h1>
 
         <div class="row mt-4"> 
-            <div class="col-4"></div>
+            <div class="col-md-4"></div>
 
-            <div class="col-4 d-flex justify-content-center">
+            <div class="col-md-4 d-flex justify-content-center">
                 <form method="get" action="{{ url_for('get_data') }}">
                     <input type="text" class="search-box rounded-pill" name="city" placeholder="Enter city" required>
                     <button type="submit" class="search-btn rounded-pill">Search</button>
                 </form>
             </div>
 
-            <div class="col-4"></div>
+            <div class="col-md-4"></div>
         </div>
         
     
         {% if city and forecast %}
-        <h3>Weather in {{ city.name }} {{ city.country }}</h3> 
+        <h3 class="text-center">Weather in {{ city.name }} {{ city.country }}</h3> 
 
             {% if forecast|length > 0 %}
-                <div class="main-forecast">
+            <div class="row">
+                <div class="col-md-6 d-flex flex-column align-items-center justify-content-center">
                     <h4>{{ forecast[0].date }}</h4>
                     <p><img src="https://openweathermap.org/img/wn/{{forecast[0].icon}}@2x.png" alt="Icon"></p>
                     <p> Temperature: {{ forecast[0].temperature }}°C</p>
@@ -41,20 +42,22 @@
                     <p> Description: {{ forecast[0].description }}</p>
 
                 </div>
-                <div class="forecast-list">
-                    {% for day in forecast[1:] %}
-                    <div class="other">
+                <div class="col-md-6 row">
+                {% for day in forecast[1:] %}
+                    <div class="col-md-6 other">
                         <h4>{{ day.date }}</h4>
                         <p><img src="https://openweathermap.org/img/wn/{{day.icon}}@2x.png" alt="Icon"></p>
                         <p> Temperature: {{ day.temperature }}</p>
-                        <p> Humidity: {{ day.humidity }}</p>
+                        <!-- <p> Humidity: {{ day.humidity }}</p> -->
                         <p> Wind: {{ day.wind }}</p>
                         <p> Description: {{ day.description }}</p>
                     </div>
-                {% endfor %}
+                    {% endfor %}
                 </div>
+            </div>
             {% endif %}
         {% endif %}
+
     </section>
   
 

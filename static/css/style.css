@@ -2,7 +2,7 @@
     text-decoration: none;
 }
 section{
-    width: 100vw;
+    max-width: 100vw;
     min-height: 100vh;
     background-color: rgba(21, 92, 91, 0.864);
     overflow: hidden;
@@ -17,18 +17,7 @@ section{
     padding: 16px;
 }
 
-.main-forecast{
-    width: 100%;
-}
-.forecast-list{
-    display: flex;
-    justify-content: space-evenly;
-    padding: 10px;
-}
 .other{
-    width: 330px;
     background-color: rgba(255, 228, 196, 0.518);
-    border-radius: 10px;
-    padding: 10px;
 }
 
