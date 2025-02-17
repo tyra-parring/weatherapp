@@ -30,7 +30,7 @@
 
             {% if forecast|length > 0 %}
             <div class="row">
-                <div class="col-md-6 d-flex flex-column align-items-center justify-content-start ">
+                <div class="col-lg-6 d-flex flex-column align-items-center justify-content-start ">
                     <div class="d-flex flex-column align-items-center justify-content-evenly today p-5 rounded-5">
                         <div class="d-flex align-items-center">
                             <p><img src="https://openweathermap.org/img/wn/{{forecast[0].icon}}@2x.png" alt="Icon"></p>
@@ -42,7 +42,7 @@
                         <p> Description: {{ forecast[0].description }}</p>
                     </div>
                 </div>
-                <div class="col-md-5 row g-2 ">
+                <div class="col-lg-6 row g-2 ">
                 {% for day in forecast[1:] %}
                     <div class="col-md-5 other text-center m-2 upcoming p-2 rounded-4">
                         <h4>{{ day.date }}</h4>

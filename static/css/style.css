@@ -6,7 +6,7 @@
 section{
     max-width: 100vw;
     min-height: 100vh;
-    background-color: rgb(80, 0, 115, 0.7);
+    /* background-color: rgb(80, 0, 115, 0.7); */
     overflow: hidden;
 }
 .heading{
@@ -53,7 +53,7 @@ section{
 }
 
 body{
-    background-image: url('../images/Wallpaper_PC.jpg');
+    background-image: url('../images/Sunset_PC.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -65,7 +65,7 @@ body{
 /* Tablets (768px - 1024px) */
 @media (max-width: 1024px) {
     body {
-      background-image: url('../images/Wallpaper_Tablet.jpg');
+      background-image: url('../images/Sunset_Tablet.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -78,7 +78,7 @@ body{
   /* Phones (up to 767px) */
   @media (max-width: 767px) {
     body {
-      background-image: url('../images/Wallpaper_Phone.jpg');
+      background-image: url('../images/Send_Phone.jpg');
     }
   }
 
